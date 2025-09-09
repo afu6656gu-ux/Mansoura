@@ -9,6 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-top: 135%; /* ارتفاع مناسب للنموذج */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -35,7 +51,7 @@
                             <img src="https://i.postimg.cc/5NhfJLmz/Picsart-25-09-09-10-11-27-997.png" alt="شعار نادي المنصورة">
                         </div>
                         <h3>المنصورة</h3>
-                        <a href="https://ar.wikipedia.org/wiki/%D9%86%D8%A7%D0%AF%D9%8A_%D8%A7%D9%84%D9%85%D9%86%D8%B5%D9%88%D8%B1%D8%A9" target="_blank" style="color: var(--primary-color); text-decoration: none; margin-top: 5px; font-size: 0.9rem;">
+                        <a href="https://ar.wikipedia.org/wiki/%D9%86%D8%A7%D9%8A%D9%8A_%D8%A7%D9%84%D9%85%D9%86%D8%B5%D9%88%D8%B1%D8%A9" target="_blank" style="color: var(--primary-color); text-decoration: none; margin-top: 5px; font-size: 0.9rem;">
                             <i class="fas fa-info-circle"></i> معلومات النادي
                         </a>
                     </div>
@@ -70,138 +86,25 @@
                     </div>
                 </div>
                 
-                <button class="booking-btn" onclick="showBookingPage()">احجز تذكرتك الآن</button>
+                <button class="booking-btn" onclick="document.getElementById('bookingSection').scrollIntoView({behavior:'smooth'});">
+                    احجز تذكرتك الآن
+                </button>
             </div>
         </section>
         
-        <!-- صفحة الحجز - الخطوة 1 -->
-        <section id="bookingStep1" class="booking-section">
+        <!-- Google Form مدمج -->
+        <section id="bookingSection" class="booking-section">
             <div class="form-header">
                 <h2>حجز تذكرة مباراة المنصورة × مسار</h2>
-                <p>الخطوة 1 من 2: معلومات الحضور</p>
+                <p>من فضلك املأ البيانات التالية لإتمام الحجز</p>
             </div>
-            
-            <div class="form-steps">
-                <div class="step active">
-                    <div class="step-number">1</div>
-                    <div class="step-text">المعلومات الشخصية</div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-text">تأكيد الحجز</div>
-                </div>
+
+            <div class="iframe-container">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeFHT2vba7ZZaQj8jOFPBJu6pFAqbXkO51WkogsOoQ71kMV3A/viewform?embedded=true" 
+                    allowfullscreen>
+                </iframe>
             </div>
-            
-            <form id="personalInfoForm">
-                <div class="form-group">
-                    <label for="fullName">الاسم بالكامل</label>
-                    <input type="text" id="fullName" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="nationalId">رقم البطاقة الشخصية</label>
-                    <input type="text" id="nationalId" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">رقم الهاتف</label>
-                    <input type="tel" id="phone" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input type="email" id="email" required>
-                </div>
-                
-                <div class="form-navigation">
-                    <button type="button" class="nav-btn btn-prev" onclick="hideBookingPage()">عودة</button>
-                    <button type="button" class="nav-btn btn-next" onclick="goToStep2()">التالي</button>
-                </div>
-            </form>
-        </section>
-        
-        <!-- صفحة الحجز - الخطوة 2 -->
-        <section id="bookingStep2" class="booking-section">
-            <div class="form-header">
-                <h2>حجز تذكرة مباراة المنصورة × مسار</h2>
-                <p>الخطوة 2 من 2: تأكيد الحجز</p>
-            </div>
-            
-            <div class="form-steps">
-                <div class="step active">
-                    <div class="step-number">1</div>
-                    <div class="step-text">المعلومات الشخصية</div>
-                </div>
-                <div class="step active">
-                    <div class="step-number">2</div>
-                    <div class="step-text">تأكيد الحجز</div>
-                </div>
-            </div>
-            
-            <div class="ticket-details">
-                <h3>تفاصيل الحجز</h3>
-                <div class="ticket-row">
-                    <span>المباراة:</span>
-                    <span>المنصورة × مسار</span>
-                </div>
-                <div class="ticket-row">
-                    <span>التاريخ:</span>
-                    <span>الخميس 9 ديسمبر 2025</span>
-                </div>
-                <div class="ticket-row">
-                    <span>الوقت:</span>
-                    <span>4:00 مساءً</span>
-                </div>
-                <div class="ticket-row">
-                    <span>الاسم:</span>
-                    <span id="confirmName"></span>
-                </div>
-                <div class="ticket-row">
-                    <span>رقم الهاتف:</span>
-                    <span id="confirmPhone"></span>
-                </div>
-            </div>
-            
-            <div class="form-navigation">
-                <button type="button" class="nav-btn btn-prev" onclick="backToStep1()">السابق</button>
-                <button type="button" class="nav-btn btn-submit" onclick="submitBooking()">تأكيد الحجز</button>
-            </div>
-        </section>
-        
-        <!-- صفحة التأكيد -->
-        <section class="confirmation-page" id="confirmationPage">
-            <div class="checkmark"></div>
-            <div class="confirmation-message">
-                <h2>تم الحجز بنجاح!</h2>
-                <p>شكراً لك على حجز تذكرتك لمباراة المنصورة × مسار</p>
-                <p>سيتم التواصل معك للتأكيد النهائي وحين قبولك للدخول إلى المباراة</p>
-            </div>
-            
-            <div class="ticket-details">
-                <h3>تفاصيل التذكرة</h3>
-                <div class="ticket-row">
-                    <span>رقم الحجز:</span>
-                    <span id="bookingNumber">MNZ-2023-7584</span>
-                </div>
-                <div class="ticket-row">
-                    <span>المباراة:</span>
-                    <span>المنصورة × مسار</span>
-                </div>
-                <div class="ticket-row">
-                    <span>التاريخ:</span>
-                    <span>السبت 15 ديسمبر 2023</span>
-                </div>
-                <div class="ticket-row">
-                    <span>الوقت:</span>
-                    <span>7:00 مساءً</span>
-                </div>
-                <div class="ticket-row">
-                    <span>الاسم:</span>
-                    <span id="ticketName"></span>
-                </div>
-            </div>
-            
-            <button class="booking-btn" onclick="goToHomePage()">العودة إلى الصفحة الرئيسية</button>
         </section>
     </div>
     
@@ -217,8 +120,5 @@
             <p>للاستفسار: info@almansouraclub.com - 01012345678</p>
         </div>
     </footer>
-
-    
-    <script src="script.js"></script>
 </body>
 </html>
