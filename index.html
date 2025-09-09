@@ -24,6 +24,21 @@
             border: none;
             border-radius: 12px;
         }
+        .booking-btn {
+            display: inline-block;
+            background: var(--primary-color, #e63946);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        .booking-btn:hover {
+            background: #d62828;
+        }
     </style>
 </head>
 <body>
@@ -86,9 +101,8 @@
                     </div>
                 </div>
                 
-                <button class="booking-btn" onclick="document.getElementById('bookingSection').scrollIntoView({behavior:'smooth'});">
-                    احجز تذكرتك الآن
-                </button>
+                <!-- الزرار الجديد -->
+                <a href="#bookingSection" class="booking-btn">احجز تذكرتك الآن</a>
             </div>
         </section>
         
