@@ -1,0 +1,11 @@
+body {font-family: 'Cairo', sans-serif; background:#fdf6e3; margin:0; padding:0;}
+.container {width:90%; max-width:1200px; margin:auto;}
+header {background:#000; color:#fff; padding:1rem; text-align:center;}
+.hero {background:#ff8c00; color:#fff; padding:2rem; margin:1rem 0; border-radius:12px;}
+.match-card {background:#fff; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+.booking-btn {background:#ff8c00; border:none; color:#fff; padding:10px 20px; border-radius:20px; cursor:pointer;}
+.booking-section, .confirmation-page {display:none; background:#fff; padding:20px; margin:20px 0; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+.booking-section.active, .confirmation-page.active {display:block;}
+.ticket-details {margin:20px 0; background:#f9f9f9; padding:15px; border-radius:8px;}
+.ticket-row {display:flex; justify-content:space-between; padding:5px 0;}
+footer {background:#000; color:#fff; text-align:center; padding:1rem; margin-top:2rem;}

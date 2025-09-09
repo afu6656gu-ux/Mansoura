@@ -4,170 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نادي المنصورة - حجز تذاكر المباريات</title>
+
+    <!-- خطوط وأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- ملف الأنماط الخارجي -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="screen-size-indicator"></div>
+    
     <header>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
         <div class="container">
             <div class="logo">
-                <div class="logo-img"></div>
+                <img src="https://i.postimg.cc/5NhfJLmz/Picsart-25-09-09-10-11-27-997.png" alt="شعار نادي المنصورة">
                 <h1>نادي المنصورة</h1>
             </div>
         </div>
     </header>
-
-    <section class="hero">
-        <div class="container">
-            <h2>مرحبًا بجماهير نادي المنصورة</h2>
-            
-            <div class="welcome-text">
-                <p>يسعدنا أن نرحب بجماهير نادي المنصورة العريقة على أرض الملعب بعد فترة غياب. نلتزم بتطبيق كافة الإجراءات الاحترازية لضمان سلامتكم ومتعة مشاهدة المباراة في أجواء آمنة. احجزوا تذاكركم الآن لمشاهدة الفريق وهو يخوض غمار المنافسة في دوري المحترفين.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="matches-section">
-        <div class="container">
-            <h2 class="section-title">المباراة القادمة</h2>
-            
+    
+    <div class="container">
+        <section class="hero">
+            <h2>مرحباً بجماهير نادي المنصورة العريقة</h2>
+            <p>يمكنك الآن حجز تذكرتك لحضور المباريات على أرض الملعب وفقًا للتصريح الرسمي بعدد 250 متفرج فقط</p>
+        </section>
+        
+        <section class="matches">
+            <h2 class="section-title">المباريات القادمة</h2>
             <div class="match-card">
                 <div class="match-header">
-                    <h3>دوري المحترفين</h3>
-                </div>
-                <div class="match-teams">
                     <div class="team">
                         <div class="team-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/ar/a/aa/El_Mansoura.png" alt="شعار نادي المنصورة">
+                            <img src="https://i.postimg.cc/5NhfJLmz/Picsart-25-09-09-10-11-27-997.png" alt="شعار نادي المنصورة">
                         </div>
-                        <div class="team-name">المنصورة</div>
+                        <h3>المنصورة</h3>
                     </div>
                     <div class="vs">VS</div>
                     <div class="team">
                         <div class="team-logo">
-                            <img src="https://upload.wikimedia.org/wikipedia/ar/c/c3/%D8%B4%D8%B9%D8%A7%D8%B1_%D9%86%D8%A7%D8%AF%D9%8A_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%A7%D8%AC_%D8%A7%D9%84%D8%AD%D8%B1%D8%A8%D9%8A.png" alt="شعار الإنتاج الحربي">
+                            <img src="https://i.postimg.cc/05ZhyP5C/Picsart-25-09-09-09-43-51-060.png" alt="شعار نادي مصر">
                         </div>
-                        <div class="team-name">الإنتاج الحربي</div>
+                        <h3>مسار</h3>
                     </div>
                 </div>
+                
                 <div class="match-details">
-                    <div class="match-info">
-                        <div class="info-item">
-                            <div class="info-label">التاريخ</div>
-                            <div class="info-value">الجمعة ٢٩ أغسطس</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">الوقت</div>
-                            <div class="info-value">04:30 مساءً</div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">المكان</div>
-                            <div class="info-value">استاد المنصورة</div>
-                        </div>
+                    <div class="detail-row">
+                        <span>التاريخ:</span>
+                        <span>السبت 15 ديسمبر 2023</span>
                     </div>
-                    
-                    <div class="countdown">
-                        <div class="countdown-title">تبقى على المباراة:</div>
-                        <div class="countdown-timer">
-                            <div class="countdown-unit">
-                                <div class="unit-value" id="days">05</div>
-                                <div class="unit-label">أيام</div>
-                            </div>
-                            <div class="countdown-unit">
-                                <div class="unit-value" id="hours">12</div>
-                                <div class="unit-label">ساعات</div>
-                            </div>
-                            <div class="countdown-unit">
-                                <div class="unit-value" id="minutes">45</div>
-                                <div class="unit-label">دقائق</div>
-                            </div>
-                            <div class="countdown-unit">
-                                <div class="unit-value" id="seconds">30</div>
-                                <div class="unit-label">ثواني</div>
-                            </div>
-                        </div>
+                    <div class="detail-row">
+                        <span>الوقت:</span>
+                        <span>7:00 مساءً</span>
                     </div>
-                    
-                    <div class="seats-info">
-                        <div class="seats-title">عدد المقاعد المسموح بها</div>
-                        <div class="seats-count">500 مقعد</div>
+                    <div class="detail-row">
+                        <span>المكان:</span>
+                        <span>ملعب المنصورة الرئيسي</span>
                     </div>
-                    
-                    <a href="#" class="btn btn-center" onclick="showBookingPage('match1')">احجز تذكرتك الآن</a>
+                    <div class="detail-row">
+                        <span>التذاكر المتاحة:</span>
+                        <span>250 تذكرة فقط</span>
+                    </div>
+                </div>
+                
+                <button class="booking-btn" onclick="showBookingPage()">احجز تذكرتك الآن</button>
+            </div>
+        </section>
+        
+        <!-- صفحة الحجز -->
+        <section id="bookingStep1" class="booking-section">
+            <div class="form-header">
+                <h2>حجز تذكرة مباراة المنصورة × مسار</h2>
+                <p>الخطوة 1 من 2: معلومات الحضور</p>
+            </div>
+            <form id="personalInfoForm">
+                <div class="form-group">
+                    <label for="fullName">الاسم بالكامل</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-navigation">
+                    <button type="button" class="nav-btn btn-prev" onclick="hideBookingPage()">عودة</button>
+                    <button type="button" class="nav-btn btn-next" onclick="goToStep2()">التالي</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="bookingStep2" class="booking-section">
+            <div class="form-header">
+                <h2>تأكيد الحجز</h2>
+            </div>
+            <div class="ticket-details">
+                <div class="ticket-row">
+                    <span>الاسم:</span>
+                    <span id="confirmName"></span>
+                </div>
+                <div class="ticket-row">
+                    <span>رقم الهاتف:</span>
+                    <span id="confirmPhone"></span>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- صفحة الحجز -->
-    <section id="booking-page">
-        <div class="container">
-            <button class="btn back-btn" onclick="hideBookingPage()">← العودة إلى المباراة</button>
-            
-            <div class="booking-form">
-                <h2 class="form-title">نموذج حجز تذكرة المباراة</h2>
-                <form id="ticketForm">
-                    <div class="form-group">
-                        <label for="match">المباراة:</label>
-                        <input type="text" id="selected-match" value="المنصورة VS الإنتاج الحربي - الجمعة ٢٩ أغسطس" readonly>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="name">الاسم بالكامل:</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">رقم الهاتف:</label>
-                        <input type="tel" id="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني:</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="nationalId">رقم البطاقة الشخصية:</label>
-                        <input type="text" id="nationalId" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="address">العنوان:</label>
-                        <input type="text" id="address">
-                    </div>
-                    
-                    <button type="submit" class="btn">تأكيد الحجز</button>
-                </form>
+            <div class="form-navigation">
+                <button type="button" class="nav-btn btn-prev" onclick="backToStep1()">السابق</button>
+                <button type="button" class="nav-btn btn-submit" onclick="submitBooking()">تأكيد الحجز</button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- صفحة التأكيد -->
-    <section id="confirmation-page">
-        <div class="container">
-            <div class="success-message">
-                <div class="success-icon">
-                    <i class="fas fa-check-circle"></i>
+        <section class="confirmation-page" id="confirmationPage">
+            <h2>تم الحجز بنجاح!</h2>
+            <div class="ticket-details">
+                <div class="ticket-row">
+                    <span>الاسم:</span>
+                    <span id="ticketName"></span>
                 </div>
-                <h2>تم الحجز بنجاح!</h2>
-                <p>شكراً لك على حجز تذكرتك. سوف نتواصل معك حين قبولك للدخول إلى المباراة.</p>
-                <button class="btn" onclick="goToHomePage()">العودة إلى الصفحة الرئيسية</button>
+                <div class="ticket-row">
+                    <span>رقم الحجز:</span>
+                    <span id="bookingNumber"></span>
+                </div>
             </div>
-        </div>
-    </section>
-
+            <button class="booking-btn" onclick="goToHomePage()">العودة إلى الصفحة الرئيسية</button>
+        </section>
+    </div>
+    
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <p>© 2025 نادي المنصورة - جميع الحقوق محفوظة</p>
-                <p>للاستفسارات: info@almansouraclub.com - ت: 0501234567</p>
-                <p>العنوان: مدينة المنصورة، حي الجامعة، أمام استاد المنصورة</p>
-            </div>
+            <p>© 2023 نادي المنصورة - جميع الحقوق محفوظة</p>
         </div>
     </footer>
 
+    <!-- ملف الجافاسكربت الخارجي -->
     <script src="app.js"></script>
 </body>
 </html>
