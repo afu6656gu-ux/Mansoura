@@ -1,0 +1,470 @@
+:root {
+            --primary-color: #FF8C00;
+            --secondary-color: #000000;
+            --accent-color: #FFFFFF;
+            --text-color: #333333;
+            --light-bg: #FFF5E6;
+            --border-radius: 12px;
+            --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 70%, var(--primary-color) 100%);
+            color: var(--accent-color);
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            height: 80px;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .matches {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .match-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border-top: 5px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .match-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .match-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .team-logo {
+            width: 100px;
+            height: 100px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            border: 2px solid var(--primary-color);
+            overflow: hidden;
+            padding: 5px;
+        }
+        
+        .team-logo img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .vs {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 0 15px;
+        }
+        
+        .match-details {
+            width: 100%;
+            background: var(--light-bg);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        
+        .booking-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 15px;
+        }
+        
+        .booking-btn:hover {
+            background-color: #e67e00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230, 126, 0, 0.3);
+        }
+        
+        /* صفحات الحجز */
+        .booking-section {
+            display: none;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            margin: 2rem 0;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .booking-section.active {
+            display: block;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--secondary-color);
+        }
+        
+        .form-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .form-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #ddd;
+            z-index: 1;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ddd;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 8px;
+            transition: var(--transition);
+        }
+        
+        .step.active .step-number {
+            background: var(--primary-color);
+        }
+        
+        .step-text {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .step.active .step-text {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        input:focus, select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+        }
+        
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .nav-btn {
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-prev {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        .btn-next, .btn-submit {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .nav-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .confirmation-page {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 2rem 0;
+            display: none;
+        }
+        
+        .confirmation-page.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            margin: 0 auto 30px;
+            position: relative;
+            animation: scaleIn 0.5s ease;
+        }
+        
+        .checkmark::after {
+            content: '';
+            position: absolute;
+            left: 28px;
+            top: 45px;
+            width: 25px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 0 4px 4px;
+            transform: rotate(-45deg);
+        }
+        
+        .confirmation-message {
+            margin-bottom: 30px;
+        }
+        
+        .confirmation-message h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+        
+        .ticket-details {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 25px auto;
+            max-width: 500px;
+            text-align: right;
+        }
+        
+        .ticket-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .ticket-row:last-child {
+            border-bottom: none;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 70%, var(--primary-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        
+        .social-icons {
+            margin: 20px 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .match-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .form-steps {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .form-steps::before {
+                display: none;
+            }
+            
+            .step {
+                flex-direction: row;
+                gap: 10px;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                margin: 5px 0;
+            }
+            
+            .form-navigation {
+                flex-direction: column;
+            }
+        }
