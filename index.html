@@ -1,138 +1,117 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نادي المنصورة - حجز تذاكر المباريات</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            padding-top: 135%; /* ارتفاع مناسب للنموذج */
-        }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 12px;
-        }
-        .booking-btn {
-            display: inline-block;
-            background: var(--primary-color, #e63946);
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-        .booking-btn:hover {
-            background: #d62828;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نادي المنصورة - حجز تذاكر المباريات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-top: 135%; /* ارتفاع مناسب للفورم */
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+    .booking-btn {
+      display: inline-block;
+      background: #e63946;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .booking-btn:hover {
+      background: #d62828;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="https://i.postimg.cc/5NhfJLmz/Picsart-25-09-09-10-11-27-997.png" alt="شعار نادي المنصورة">
-                <h1>نادي المنصورة</h1>
-            </div>
-        </div>
-    </header>
-    
+  <header>
     <div class="container">
-        <section class="hero">
-            <h2>مرحباً بجماهير نادي المنصورة العريقة</h2>
-            <p>يمكنك الآن حجز تذكرتك لحضور المباريات على أرض الملعب وفقًا للتصريح الرسمي بعدد 250 متفرج فقط</p>
-        </section>
-        
-        <section class="matches">
-            <h2 class="section-title">المباريات القادمة</h2>
-            <div class="match-card">
-                <div class="match-header">
-                    <div class="team">
-                        <div class="team-logo">
-                            <img src="https://i.postimg.cc/5NhfJLmz/Picsart-25-09-09-10-11-27-997.png" alt="شعار نادي المنصورة">
-                        </div>
-                        <h3>المنصورة</h3>
-                        <a href="https://ar.wikipedia.org/wiki/%D9%86%D8%A7%D9%8A%D9%8A_%D8%A7%D9%84%D9%85%D9%86%D8%B5%D9%88%D8%B1%D8%A9" target="_blank" style="color: var(--primary-color); text-decoration: none; margin-top: 5px; font-size: 0.9rem;">
-                            <i class="fas fa-info-circle"></i> معلومات النادي
-                        </a>
-                    </div>
-                    <div class="vs">VS</div>
-                    <div class="team">
-                        <div class="team-logo">
-                            <img src="https://i.postimg.cc/05ZhyP5C/Picsart-25-09-09-09-43-51-060.png" alt="شعار نادي مصر">
-                        </div>
-                        <h3>مسار</h3>
-                        <a href="https://www.kooora.com/?team=11136" target="_blank" style="color: var(--primary-color); text-decoration: none; margin-top: 5px; font-size: 0.9rem;">
-                            <i class="fas fa-info-circle"></i> معلومات النادي
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="match-details">
-                    <div class="detail-row">
-                        <span>التاريخ:</span>
-                        <span>الخميس 9 ديسمبر 2025</span>
-                    </div>
-                    <div class="detail-row">
-                        <span>الوقت:</span>
-                        <span>4:00 مساءً</span>
-                    </div>
-                    <div class="detail-row">
-                        <span>المكان:</span>
-                        <span>ملعب المنصورة الرئيسي</span>
-                    </div>
-                    <div class="detail-row">
-                        <span>التذاكر المتاحة:</span>
-                        <span>250 تذكرة فقط</span>
-                    </div>
-                </div>
-                
-                <!-- الزرار الجديد -->
-                <a href="#bookingSection" class="booking-btn">احجز تذكرتك الآن</a>
-            </div>
-        </section>
-        
-        <!-- Google Form مدمج -->
-        <section id="bookingSection" class="booking-section">
-            <div class="form-header">
-                <h2>حجز تذكرة مباراة المنصورة × مسار</h2>
-                <p>من فضلك املأ البيانات التالية لإتمام الحجز</p>
-            </div>
-
-            <div class="iframe-container">
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSeFHT2vba7ZZaQj8jOFPBJu6pFAqbXkO51WkogsOoQ71kMV3A/viewform?embedded=true" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
+      <div class="logo">
+        <img src="https://i.postimg.cc/5NhfJLmz/Picsart-25-09-09-10-11-27-997.png" alt="شعار نادي المنصورة">
+        <h1>نادي المنصورة</h1>
+      </div>
     </div>
-    
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h2>مرحباً بجماهير نادي المنصورة العريقة</h2>
+      <p>يمكنك الآن حجز تذكرتك لحضور المباريات على أرض الملعب وفقًا للتصريح الرسمي بعدد 250 متفرج فقط</p>
+    </section>
+
+    <section class="matches">
+      <h2 class="section-title">المباريات القادمة</h2>
+      <div class="match-card">
+        <div class="match-header">
+          <div class="team">
+            <div class="team-logo">
+              <img src="https://i.postimg.cc/5NhfJLmz/Picsart-25-09-09-10-11-27-997.png" alt="شعار نادي المنصورة">
             </div>
-            <p>© 2023 نادي المنصورة - جميع الحقوق محفوظة</p>
-            <p>للاستفسار: info@almansouraclub.com - 01012345678</p>
+            <h3>المنصورة</h3>
+          </div>
+          <div class="vs">VS</div>
+          <div class="team">
+            <div class="team-logo">
+              <img src="https://i.postimg.cc/05ZhyP5C/Picsart-25-09-09-09-43-51-060.png" alt="شعار نادي مصر">
+            </div>
+            <h3>مسار</h3>
+          </div>
         </div>
-    </footer>
+
+        <div class="match-details">
+          <div class="detail-row"><span>التاريخ:</span> <span>الخميس 9 ديسمبر 2025</span></div>
+          <div class="detail-row"><span>الوقت:</span> <span>4:00 مساءً</span></div>
+          <div class="detail-row"><span>المكان:</span> <span>ملعب المنصورة الرئيسي</span></div>
+          <div class="detail-row"><span>التذاكر المتاحة:</span> <span>250 تذكرة فقط</span></div>
+        </div>
+
+        <!-- الزرار يفتح الفورم -->
+        <a href="#bookingSection" class="booking-btn">احجز تذكرتك الآن</a>
+      </div>
+    </section>
+
+    <!-- فورم Google -->
+    <section id="bookingSection" class="booking-section">
+      <div class="form-header">
+        <h2>حجز تذكرة مباراة المنصورة × مسار</h2>
+        <p>من فضلك املأ البيانات التالية لإتمام الحجز</p>
+      </div>
+      <div class="iframe-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeFHT2vba7ZZaQj8jOFPBJu6pFAqbXkO51WkogsOoQ71kMV3A/viewform?embedded=true">
+        </iframe>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>© 2023 نادي المنصورة - جميع الحقوق محفوظة</p>
+      <p>للاستفسار: info@almansouraclub.com - 01012345678</p>
+    </div>
+  </footer>
 </body>
 </html>
