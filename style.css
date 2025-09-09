@@ -1,493 +1,114 @@
-:root {
-    --primary-color: #FF8C00;
-    --secondary-color: #000000;
-    --accent-color: #FFF4E6;
-    --text-color: #333;
-    --light-bg: #f9f9f9;
-}
-
-* {
-    box-sizing: border-box;
+/* style.css */
+body {
+    font-family: 'Cairo', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Cairo', 'Arial', sans-serif;
-    transition: all 0.3s ease;
-}
-
-body {
-    background-color: var(--light-bg);
-    color: var(--text-color);
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: auto;
+    overflow: hidden;
 }
 
 header {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #333 100%);
-    color: white;
-    padding: 1rem 0;
+    background: #004080;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+header .logo img {
+    width: 50px;
+    vertical-align: middle;
 }
 
-.logo-img {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #FF6A00 100%);
-    border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    font-weight: bold;
-    color: white;
-    font-size: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.logo-img::before {
-    content: "MANSOURA SC";
-    position: absolute;
-    top: 15%;
-    font-size: 10px;
-    font-weight: bold;
-    color: white;
-}
-
-.logo-img::after {
-    content: "1932";
-    position: absolute;
-    bottom: 15%;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-}
-
-.logo h1 {
-    font-weight: 700;
-    font-size: 28px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    color: var(--primary-color);
+header .logo h1 {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    color: var(--primary-color);
-}
-
-.welcome-text {
-    background: rgba(255, 140, 0, 0.1);
+    background: #eee;
     padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-right: 4px solid var(--primary-color);
-}
-
-.welcome-text p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--secondary-color);
-}
-
-.matches-section {
-    padding: 3rem 0;
-}
-
-.section-title {
     text-align: center;
-    margin-bottom: 2rem;
-    color: var(--secondary-color);
-    position: relative;
-    padding-bottom: 15px;
-    font-size: 2rem;
 }
 
-.section-title:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background-color: var(--primary-color);
+.matches {
+    margin: 20px 0;
 }
 
 .match-card {
-    background: white;
+    background: #fff;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 5px solid var(--primary-color);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.match-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .match-header {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #333 100%);
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.match-teams {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 25px 15px;
-    background: var(--accent-color);
 }
 
 .team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    flex: 1;
-}
-
-.team-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    font-size: 20px;
-    overflow: hidden;
+    text-align: center;
 }
 
 .team-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.team-name {
-    font-weight: bold;
-    font-size: 18px;
+    width: 60px;
+    height: 60px;
 }
 
 .vs {
+    font-size: 24px;
     font-weight: bold;
-    color: var(--primary-color);
-    font-size: 22px;
-    margin: 0 15px;
 }
 
-.match-details {
-    padding: 20px;
-    text-align: center;
-}
-
-.match-info {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.info-item {
-    text-align: center;
-}
-
-.info-label {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 5px;
-}
-
-.info-value {
-    font-weight: bold;
-    font-size: 16px;
-    color: var(--secondary-color);
-}
-
-.countdown {
-    background: var(--accent-color);
-    padding: 15px;
-    border-radius: 8px;
-    margin: 20px 0;
-    text-align: center;
-}
-
-.countdown-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-}
-
-.countdown-timer {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.countdown-unit {
-    background: var(--primary-color);
-    color: white;
+.booking-btn {
+    display: block;
+    width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    min-width: 60px;
-}
-
-.unit-value {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.unit-label {
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-.seats-info {
-    background: #f0f8ff;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 20px 0;
-    text-align: center;
-    border-left: 4px solid var(--primary-color);
-}
-
-.seats-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: var(--secondary-color);
-}
-
-.seats-count {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.btn {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #FF6A00 100%);
+    margin-top: 15px;
+    background: #004080;
     color: white;
-    padding: 12px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
 }
 
-.btn:hover {
-    background: linear-gradient(135deg, #FF6A00 0%, var(--primary-color) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+.booking-btn:hover {
+    background: #0066cc;
 }
 
-.btn-center {
-    display: block;
-    text-align: center;
-    margin: 25px auto;
-    max-width: 220px;
-}
-
-.booking-form {
-    background: white;
-    padding: 30px;
+.booking-section {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    margin: 2rem auto;
-    max-width: 800px;
-    border-top: 5px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.form-title {
-    text-align: center;
-    color: var(--secondary-color);
-    margin-bottom: 25px;
-    font-size: 24px;
-}
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
+.booking-section.active {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: var(--secondary-color);
-}
-
-.form-group input,
-.form-group select {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-    border-color: var(--primary-color);
-    outline: none;
 }
 
 footer {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #333 100%);
+    background: #004080;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .social-icons a {
     color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.footer-content p {
-    margin: 5px 0;
-}
-
-/* صفحة الحجز */
-#booking-page {
-    display: none;
-    padding: 40px 0;
-    animation: fadeIn 0.5s ease;
-}
-
-.back-btn {
-    background: #6c757d;
-    margin-bottom: 20px;
-}
-
-.back-btn:hover {
-    background: #5a6268;
-}
-
-/* صفحة التأكيد */
-#confirmation-page {
-    display: none;
-    text-align: center;
-    padding: 60px 0;
-    animation: fadeIn 0.5s ease;
-}
-
-.success-icon {
-    font-size: 80px;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    animation: scaleIn 0.5s ease;
-}
-
-.success-message {
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    max-width: 700px;
-    margin: 0 auto;
-    border-top: 5px solid var(--primary-color);
-}
-
-.success-message h2 {
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-.success-message p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #555;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes scaleIn {
-    from { transform: scale(0); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-@media (max-width: 768px) {
-    .hero h2 {
-        font-size: 2rem;
-    }
-    
-    .section-title {
-        font-size: 1.7rem;
-    }
-    
-    .logo-img {
-        width: 60px;
-        height: 60px;
-        font-size: 16px;
-    }
-    
-    .logo h1 {
-        font-size: 24px;
-    }
-    
-    .team-logo {
-        width: 60px;
-        height: 60px;
-        font-size: 16px;
-    }
-    
-    .team-name {
-        font-size: 16px;
-    }
-    
-    .vs {
-        font-size: 18px;
-    }
-    
-    .match-info {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .countdown-timer {
-        flex-wrap: wrap;
-    }
+    margin: 0 10px;
+    text-decoration: none;
 }
